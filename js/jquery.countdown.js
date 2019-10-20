@@ -1,5 +1,6 @@
 /*!
- * The Final Countdown for jQuery v2.1.0 (http://hilios.github.io/jQuery.countdown/)
+
+* The Final Countdown for jQuery v2.1.0 (http://hilios.github.io/jQuery.countdown/)
  * Copyright (c) 2015 Edson Hilios
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -31,7 +32,8 @@
     var instances = [], matchers = [], defaultOptions = {
         precision: 100,
         elapse: false
-    };
+     };
+    
     matchers.push(/^[0-9]*$/.source);
     matchers.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
@@ -66,7 +68,9 @@
     function escapedRegExp(str) {
         var sanitize = str.toString().replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
         return new RegExp(sanitize);
+    
     }
+    
     function strftime(offsetObject) {
         return function(format) {
             var directives = format.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);
